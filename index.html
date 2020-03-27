@@ -1,0 +1,37 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+<div id="chartDiv">
+    <canvas id="chart" width="1200" height="600" style="border:1px solid">
+    </canvas>
+</div>
+<div>
+    <label for="beta">beta</label>
+    <input type="range" min="0" max="10" step=0.1 id="beta" class="inputs" value=3 title="Infection constant">
+    <span id="betaText">3</span>
+</div>
+<div>
+    <label for="alpha">alpha</label>
+    <input type="range" min="0" max="5" step=0.1 id="alpha" class="inputs" value=1 title="Recovery constant">
+    <span id="alphaText">1</span>
+</div>
+<div id="R0Text" title="Basic Reproduction Number, beta/alpha">
+    <a href="https://en.wikipedia.org/wiki/Basic_reproduction_number" style="text-decoration:none;">R<sub>0</sub></a> = 3
+</div>
+<div>
+    <label for="I0">I<sub>0</sub></label>
+    <input type="number" class="inputs" id="I0" value=1 min=1 title="Initial infected population">
+</div>
+<div>
+    <label for="N">N</label>
+    <input type="number" id="N" class="inputs" value=1000000 min=0 title="Total population">
+</div>
+<div>
+    <label for="delT">delT</label>
+    <input type="number" id="delT" class="inputs" value=.1 min=0.1 max=1 step=0.1 title="Time step for discretization. The lower, the better.">
+</div>
+<div>
+    <label for="maxTime">Max. Time</label>
+    <input type="number" id="maxTime" class="inputs" value=20 title="Duration to simulate">
+</div>
+
+<script src="main.js"></script>
